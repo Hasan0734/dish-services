@@ -1,113 +1,179 @@
-import Image from 'next/image'
+import BestSellSection from "@/components/home/BestSellSection";
+import BulkOrder from "@/components/home/BulkOrder";
+import TipsSection from "@/components/home/TipsSection";
+import VideoSection from "@/components/home/VideoSection";
+import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main>
+      {/* <div className="container mx-auto top-banner">
+        <div className=" flex items-center justify-center py-20">
+          <div className="text-white">
+            <div className="text-center">
+              <h1 className="text-[40px] leading-[48px] font-bold">
+                Good Morning
+              </h1>
+              <p className="font-normal text-xl">
+                Having a healthy breakfast reduces chances of blood sugar by{" "}
+                <b>75%</b>
+              </p>
+            </div>
+            <div className="flex justify-center mt-12">
+              <img src="/assets/Group 63.png" alt="clock" />
+            </div>
+            <div className="text-center mt-12">
+              <p className="text-2xl font-normal">
+                Healthy food for you all day
+              </p>
+            </div>
+          </div>
         </div>
-      </div>
+      </div> */}
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+      <section className="mt-20">
+        <div className="container py-32 px-4 md:px-8">
+          <div className="flex items-center gap-10 justify-center">
+            <svg
+              width="106"
+              height="221"
+              viewBox="0 0 106 221"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g filter="url(#filter0_i_22_55)">
+                <path
+                  d="M65.7715 196.34V63.0391C40.9668 82.082 24.2676 91.6035 15.6738 91.6035C11.5723 91.6035 7.91016 89.9922 4.6875 86.7695C1.5625 83.4492 0 79.6406 0 75.3438C0 70.3633 1.5625 66.7012 4.6875 64.3574C7.8125 62.0137 13.3301 58.9863 21.2402 55.2754C33.0566 49.709 42.4805 43.8496 49.5117 37.6973C56.6406 31.5449 62.9395 24.6602 68.4082 17.043C73.877 9.42578 77.4414 4.73828 79.1016 2.98047C80.7617 1.22266 83.8867 0.34375 88.4766 0.34375C93.6523 0.34375 97.8027 2.3457 100.928 6.34961C104.053 10.3535 105.615 15.8711 105.615 22.9023V190.627C105.615 210.256 98.9258 220.07 85.5469 220.07C79.5898 220.07 74.8047 218.068 71.1914 214.064C67.5781 210.061 65.7715 204.152 65.7715 196.34Z"
+                  fill="#62A554"
+                />
+              </g>
+              <defs>
+                <filter
+                  id="filter0_i_22_55"
+                  x="0"
+                  y="0.34375"
+                  width="105.615"
+                  height="227.727"
+                  filterUnits="userSpaceOnUse"
+                  color-interpolation-filters="sRGB"
+                >
+                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                  <feBlend
+                    mode="normal"
+                    in="SourceGraphic"
+                    in2="BackgroundImageFix"
+                    result="shape"
+                  />
+                  <feColorMatrix
+                    in="SourceAlpha"
+                    type="matrix"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                    result="hardAlpha"
+                  />
+                  <feOffset dy="8" />
+                  <feGaussianBlur stdDeviation="7" />
+                  <feComposite
+                    in2="hardAlpha"
+                    operator="arithmetic"
+                    k2="-1"
+                    k3="1"
+                  />
+                  <feColorMatrix
+                    type="matrix"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+                  />
+                  <feBlend
+                    mode="normal"
+                    in2="shape"
+                    result="effect1_innerShadow_22_55"
+                  />
+                </filter>
+              </defs>
+            </svg>
+            <div className="w-[236px] h-[236px] ">
+              <img
+                className="w-full"
+                src={"/assets/cap-dish-2.png"}
+                alt="caption dish"
+              />
+            </div>
+            <div className="w-[236px] h-[236px] ">
+              <img
+                className="w-full"
+                src={"/assets/cap-dish-2.png"}
+                alt="caption dish"
+              />
+            </div>
+            <svg
+              width="180"
+              height="223"
+              viewBox="0 0 180 223"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g filter="url(#filter0_i_22_53)">
+                <path
+                  d="M56.2305 26.0742L139.873 152.637V24.9023C139.873 16.6016 141.631 10.4004 145.146 6.29883C148.76 2.09961 153.594 0 159.648 0C165.898 0 170.83 2.09961 174.443 6.29883C178.057 10.4004 179.863 16.6016 179.863 24.9023V193.799C179.863 212.646 172.051 222.07 156.426 222.07C152.52 222.07 149.004 221.484 145.879 220.312C142.754 219.238 139.824 217.48 137.09 215.039C134.355 212.598 131.816 209.766 129.473 206.543C127.129 203.223 124.785 199.854 122.441 196.436L40.8496 71.3379V197.168C40.8496 205.371 38.9453 211.572 35.1367 215.771C31.3281 219.971 26.4453 222.07 20.4883 222.07C14.3359 222.07 9.4043 219.971 5.69336 215.771C1.98242 211.475 0.126953 205.273 0.126953 197.168V31.4941C0.126953 24.4629 0.908203 18.9453 2.4707 14.9414C4.32617 10.5469 7.40234 6.98242 11.6992 4.24805C15.9961 1.41602 20.6348 0 25.6152 0C29.5215 0 32.8418 0.634766 35.5762 1.9043C38.4082 3.17383 40.8496 4.88281 42.9004 7.03125C45.0488 9.17969 47.1973 11.9629 49.3457 15.3809C51.5918 18.7988 53.8867 22.3633 56.2305 26.0742Z"
+                  fill="#62A554"
+                />
+              </g>
+              <defs>
+                <filter
+                  id="filter0_i_22_53"
+                  x="0.126953"
+                  y="0"
+                  width="179.736"
+                  height="230.07"
+                  filterUnits="userSpaceOnUse"
+                  color-interpolation-filters="sRGB"
+                >
+                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                  <feBlend
+                    mode="normal"
+                    in="SourceGraphic"
+                    in2="BackgroundImageFix"
+                    result="shape"
+                  />
+                  <feColorMatrix
+                    in="SourceAlpha"
+                    type="matrix"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                    result="hardAlpha"
+                  />
+                  <feOffset dy="8" />
+                  <feGaussianBlur stdDeviation="7" />
+                  <feComposite
+                    in2="hardAlpha"
+                    operator="arithmetic"
+                    k2="-1"
+                    k3="1"
+                  />
+                  <feColorMatrix
+                    type="matrix"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+                  />
+                  <feBlend
+                    mode="normal"
+                    in2="shape"
+                    result="effect1_innerShadow_22_53"
+                  />
+                </filter>
+              </defs>
+            </svg>
+          </div>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+          <div className="mt-20  text-center text-black">
+            <h2 className="text-4xxl font-bold pb-8">Some caption</h2>
+            <p className="text-xl">We give our 100% to deliver the best food</p>
+          </div>
+        </div>
+        <hr className="container broder border-section-color" />
+      </section>
+u
+      <BestSellSection />
+      <BulkOrder />
+      <VideoSection />
+      <TipsSection />
     </main>
-  )
+  );
 }
