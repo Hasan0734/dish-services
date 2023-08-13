@@ -4,6 +4,15 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card } from "../ui/card";
 import Image from "next/image";
 import { Button } from "../ui/button";
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+
+} from "@/components/ui/sheet";
 
 const dishes = [
   {
@@ -87,19 +96,28 @@ const BestSellSection = () => {
             <TabsContent value="best-sellers">
               <div className="grid grod-cols-1 lg:grid-cols-5 gap-12">
                 {dishes.map((dish) => (
-                  <Card key={dish.id} className="border-0 shadow-none">
-                    <div className="relative w-full h-[299px] rounded-xl">
-                      <Image fill src={dish.image} alt="product-image" />
-                    </div>
-                    <div className="pt-5 text-center">
-                      <h2 className="text-black text-xl font-bold">
-                        {dish.name}
-                      </h2>
-                      <h6 className="text-base text-black font-medium mt-2">
-                        {dish.cals} Cals
-                      </h6>
-                    </div>
-                  </Card>
+                  <Sheet key={dish.id}>
+
+                    <Card className="border-0 shadow-none">
+                      <SheetTrigger asChild>
+                        <div className="relative w-full h-[299px] rounded-xl">
+                          <Image fill src={dish.image} alt="product-image" />
+                        </div>
+                      </SheetTrigger>
+
+                      <div className="pt-5 text-center">
+                        <h2 className="text-black text-xl font-bold">
+                          {dish.name}
+                        </h2>
+                        <h6 className="text-base text-black font-medium mt-2">
+                          {dish.cals} Cals
+                        </h6>
+                      </div>
+                    </Card>
+                    <SheetContent >
+                      <img src="/" alt="" />
+                    </SheetContent>
+                  </Sheet>
                 ))}
               </div>
 

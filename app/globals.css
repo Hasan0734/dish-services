@@ -85,12 +85,12 @@ body,
 }
 
 
-.top-banner{
+/* .top-banner{
   background: url(/assets/bg-shape-2.png);
   background-repeat: no-repeat;
   margin-top: 83px;
   position: relative;
-  /* background-size: contain 100px; */
+  background-size: contain 100px;
   width: 100%;
   background-size: 100% contain;
   height: 700px;
@@ -99,14 +99,16 @@ body,
   content: "";
   background: url(/assets/bg-shape-1.png);
   position: absolute;
-  top: 495px;
+  top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   height: 100%;
+  width: 100%;
   background-repeat: no-repeat;
   background-size: contain;
-}
+} */
+
 
 
 .tips-swipper .swiper-pagination .swiper-pagination-bullet{ 

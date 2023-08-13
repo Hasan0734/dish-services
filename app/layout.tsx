@@ -26,7 +26,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={raleway.className}>
         <Navbar />
-        {children}
+        <main>{children}</main>
         <Footer />
       </body>
     </html>

@@ -6,11 +6,12 @@ import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
-    <main>
-      {/* <div className="container mx-auto top-banner">
-        <div className=" flex items-center justify-center py-20">
+    <>
+      <section className=" mt-20">
+        <div className="container relative">
+          <div className="absolute inset-0 flex justify-center ">
           <div className="text-white">
-            <div className="text-center">
+            <div className="text-center mt-16">
               <h1 className="text-[40px] leading-[48px] font-bold">
                 Good Morning
               </h1>
@@ -29,7 +30,21 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div> */}
+
+          <img
+            className="w-full object-fill"
+            src="/assets/bg-shape-2.png"
+            alt="background-img"
+          />
+          <div className="absolute -bottom-4  inset-x-0 ">
+            <img
+              className="w-full"
+              src="/assets/bg-shape-1.png"
+              alt="background-img"
+            />
+          </div>
+        </div>
+      </section>
 
       <section className="mt-20">
         <div className="container py-32 px-4 md:px-8">
@@ -169,11 +184,10 @@ export default function Home() {
         </div>
         <hr className="container broder border-section-color" />
       </section>
-u
       <BestSellSection />
       <BulkOrder />
       <VideoSection />
       <TipsSection />
-    </main>
+    </>
   );
 }
