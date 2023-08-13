@@ -10,7 +10,7 @@ const TipsSection = () => {
   return (
     <section>
       <div className="container px-4 md:px-8 py-32">
-        <div className="grid grid-cols-1 md:grid-cols-2 h-[300px] overflow-hidden md:shadow-[0px_2px_14px_0px_rgba(0,0,0,0.25)] md:rounded-2.5xl">
+        <div className="grid grid-cols-1 md:grid-cols-2 h-auto md:h-[300px] overflow-hidden md:shadow-[0px_2px_14px_0px_rgba(0,0,0,0.25)] md:rounded-2.5xl">
           <div className="">
             <img
               className="w-full h-[300px] "

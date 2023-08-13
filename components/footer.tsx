@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer>
       <div className="container px-4 md:px-8 py-16 bg-green">
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="text-white ">
             <h2 className="text-xl font-bold mb-5">Contact Us</h2>
             <p className="text-base">Ph: 9746978740</p>

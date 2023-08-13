@@ -23,7 +23,7 @@ const VideoSection = () => {
           <h3 className="text-center text-4xxl font-bold text-black">
             Some caption
           </h3>
-          <div className="w-full mt-8 relative h-[606px]">
+          <div className="w-full mt-8 relative h-[240px] md:h-[606px]">
             <video
               ref={videoRef}
               className="w-full h-full object-fill z-0"
@@ -32,7 +32,7 @@ const VideoSection = () => {
               muted
               autoPlay
             />
-            <div className="absolute inset-0 top-10 left-10 z-[5]">
+            <div className="hidden md:block absolute inset-0 top-10 left-10 z-[5]">
               <h2 className="text-4xxl font-bold text-white">Some text</h2>
             </div>
 
