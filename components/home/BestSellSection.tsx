@@ -9,30 +9,35 @@ const dishes = [
     name: "Dish name 1",
     cals: "312",
     image: "/assets/dish/dish-40.png",
+    status: ''
   },
   {
     id: 2,
     name: "Dish name 2",
     cals: "255",
     image: "/assets/dish/dish-41.png",
+    status: ''
   },
   {
     id: 3,
     name: "Dish name 3",
     cals: "330",
     image: "/assets/dish/dish-42.png",
+    status: ''
   },
   {
     id: 4,
     name: "Dish name 4",
     cals: "158",
     image: "/assets/dish/dish-43.png",
+    status: ''
   },
   {
     id: 5,
     name: "Dish name 5",
     cals: "142",
     image: "/assets/dish/dish-44.png",
+    status: ''
   },
   { id: 6, name: "Dish name 6", cals: "26", image: "/assets/dish/dish-45.png" },
   { id: 7, name: "Dish name 7", cals: "80", image: "/assets/dish/dish-46.png" },
@@ -83,13 +88,13 @@ const BestSellSection = () => {
             </p>
 
             <TabsContent value="best-sellers">
-              <div className="grid grod-cols-1 lg:grid-cols-5 gap-12">
+              <div className="lg:grid flex lg:grid-cols-5 gap-8 lg:gap-12 overflow-scroll pb-5 scrollbar-none">
                 {dishes.map((dish) => (
                   <ProductCard key={dish.id} dish={dish} />
                 ))}
               </div>
 
-              <div className="mt-16 text-center">
+              <div className="mt-16 text-center hidden md:block">
                 <Button
                   variant={null}
                   className="rounded-full border border-[#ccc] px-7 py-6 text-warning text-xl font-bold"
@@ -103,7 +108,7 @@ const BestSellSection = () => {
             </TabsContent>
           </Tabs>
         </div>
-        <hr className="container broder border-section-color" />
+        <hr className="container broder border-section-color hidden md:block" />
       </section>
     </>
   );

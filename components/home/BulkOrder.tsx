@@ -8,7 +8,7 @@ const BulkOrder = () => {
   return (
     <>
       <section>
-        <div className="container py-32 px-0 md:px-8 ">
+        <div className="container pb-8 md:py-32 px-0 md:px-8 ">
           <div className="flex flex-col lg:flex-row md:shadow-[0px_2px_14px_0px_rgba(0,0,0,0.25)] md:rounded-2.5xl">
             <div className="w-full lg:w-[772px] flex-shrink-0">
               <img className="w-full" src="/assets/dish-80.png" alt="dish" />

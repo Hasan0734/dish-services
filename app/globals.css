@@ -109,7 +109,17 @@ body,
   background-size: contain;
 } */
 
+.tips-swipper .swiper-pagination-horizontal{
+  left: 300px;
+  bottom: 30px;
+}
 
+@media only screen and (max-width: 900px) {
+  .tips-swipper .swiper-pagination-horizontal{
+    left: 0;
+    bottom: 12px;
+  }
+}
 
 .tips-swipper .swiper-pagination .swiper-pagination-bullet{ 
   width: 16px;

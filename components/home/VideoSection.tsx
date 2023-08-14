@@ -23,7 +23,7 @@ const VideoSection = () => {
           <h3 className="text-center text-4xxl font-bold text-black">
             Some caption
           </h3>
-          <div className="w-full mt-8 relative h-[240px] md:h-[606px]">
+          <div className="w-full mt-8 relative h-[240px] sm:h-[400px] md:h-[606px]">
             <video
               ref={videoRef}
               className="w-full h-full object-fill z-0"
