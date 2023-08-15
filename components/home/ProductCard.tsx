@@ -11,22 +11,30 @@ import Image from "next/image";
 import { Button } from "../ui/button";
 import { useWindowSize } from "@/lib/hooks";
 
-const ProductCard = ({ dish }: any) => {
+const ProductCard = ({
+  dish,
+  className = "w-[238px] md:w-auto",
+  height = "h-[299px]",
+}: any) => {
+  
   const windowSize = useWindowSize();
 
   return (
     <>
       <Sheet key={dish.id}>
-        <Card className="border-0 shadow-none w-[238px] flex-grow flex-shrink-0">
+        <Card
+          className={`border-0 shadow-none flex-grow flex-shrink-0 ${className}`}
+        >
           <SheetTrigger asChild>
-            <div className="relative w-full h-[299px] rounded-xl hover:cursor-pointer">
+            <div
+              className={`relative w-full ${height} rounded-xl hover:cursor-pointer`}
+            >
               <Image fill src={dish.image} alt="product-image" />
 
               {/* status */}
               <div className="absolute border border-warning right-5 top-5 w-6 h-6 flex items-center justify-center">
                 <span className="w-3 h-3 rounded-full bg-warning block"></span>
               </div>
-              
             </div>
           </SheetTrigger>
 

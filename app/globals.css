@@ -133,3 +133,24 @@ body,
   background: #111;
   border-radius: 50%;
 }
+
+
+.about-section .about-card{
+  width: 476px;
+  height: 547px;
+  border-radius: 40px;
+  background: #65A058;
+  box-shadow: -37.66666793823242px 37.66666793823242px 37.66666793823242px 0px rgba(255, 255, 255, 0.10) inset, 37.66666793823242px -37.66666793823242px 37.66666793823242px 0px rgba(165, 165, 165, 0.10) inset;
+  backdrop-filter: blur(37.66666793823242px);
+}
+
+@media only screen and (max-width: 768px) {
+ .about-section .about-card{
+    width: 320px;
+    height: 296px;
+    border-radius: 4px;
+    background: #65A058;
+    box-shadow: -37.66666793823242px 37.66666793823242px 37.66666793823242px 0px rgba(255, 255, 255, 0.10) inset, 37.66666793823242px -37.66666793823242px 37.66666793823242px 0px rgba(165, 165, 165, 0.10) inset;
+    backdrop-filter: blur(37.66666793823242px);
+  }
+}

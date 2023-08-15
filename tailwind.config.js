@@ -67,7 +67,7 @@ module.exports = {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
-        '2.5xl': "20px"
+        "2.5xl": "20px",
       },
       keyframes: {
         "accordion-down": {
@@ -88,7 +88,13 @@ module.exports = {
         "4xxl": ["40px", "47px"],
         "3xl": ["32px", "36px"],
       },
+      screens: {
+        xs: "360px",
+      },
     },
   },
-  plugins: [require("tailwindcss-animate") ,require('tailwind-scrollbar')({ nocompatible: true }),],
+  plugins: [
+    require("tailwindcss-animate"),
+    require("tailwind-scrollbar")({ nocompatible: true }),
+  ],
 };
