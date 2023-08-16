@@ -6,6 +6,9 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import Footer from "@/components/footer";
+import { cn } from "@/lib/utils";
+import MobileMenu from "@/components/mobileMenu";
+
 
 const raleway = Raleway({
   weight: ["400", "500", "600", "700"],
@@ -24,9 +27,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={raleway.className}>
+      <body className={cn(raleway.className, "relative")}>
         <Navbar />
         <main>{children}</main>
+        <MobileMenu/>
         <Footer />
       </body>
     </html>

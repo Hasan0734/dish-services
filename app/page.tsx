@@ -7,36 +7,43 @@ import { Button } from "@/components/ui/button";
 export default function Home() {
   return (
     <>
-      <section className=" mt-20">
-        <div className="container relative">
-          <div className="absolute inset-0 flex justify-center ">
-          <div className="text-white">
-            <div className="text-center mt-16">
-              <h1 className="text-[40px] leading-[48px] font-bold">
-                Good Morning
-              </h1>
-              <p className="font-normal text-xl">
-                Having a healthy breakfast reduces chances of blood sugar by{" "}
-                <b>75%</b>
-              </p>
-            </div>
-            <div className="flex justify-center mt-12">
-              <img src="/assets/Group 63.png" alt="clock" />
-            </div>
-            <div className="text-center mt-12">
-              <p className="text-2xl font-normal">
-                Healthy food for you all day
-              </p>
+      <section className="mt-20">
+        <div className="container relative bg-warning h-[500px] md:h-[700px]">
+          <div className="absolute inset-0 flex justify-center py-10 z-20">
+            <div className="text-white">
+              <div className="text-center">
+                <h1 className="text-2xl md:text-[40px] md:leading-[48px] font-bold">
+                  Good Morning
+                </h1>
+                <p className="font-normal text-sm md:text-xl">
+                  Having a healthy breakfast reduces chances of blood sugar by{" "}
+                  <b>75%</b>
+                </p>
+              </div>
+              <div className="flex justify-center mt-12">
+                <img
+                  className="w-[200px] lg:w-[365px] h-[200px] lg:h-[365px]"
+                  src="/assets/Group 63.png"
+                  alt="clock"
+                />
+              </div>
+              <div className="text-center mt-12">
+                <p className="text-sm md:text-2xl font-normal">
+                  Healthy food for you all day
+                </p>
+              </div>
             </div>
           </div>
-        </div>
 
-          <img
-            className="w-full object-fill"
-            src="/assets/bg-shape-2.png"
-            alt="background-img"
-          />
-          <div className="absolute -bottom-4  inset-x-0 ">
+          <div className="absolute -bottom-9 md:-bottom-[9.25rem] md:inset-x-0 ">
+            <img
+              className="w-full"
+              src="/assets/bg-shape-2.png"
+              alt="background-img"
+            />
+          </div>
+
+          <div className="absolute -bottom-[3rem] md:-bottom-[167px]  inset-x-0 ">
             <img
               className="w-full"
               src="/assets/bg-shape-1.png"

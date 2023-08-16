@@ -154,3 +154,9 @@ body,
     backdrop-filter: blur(37.66666793823242px);
   }
 }
+
+
+.mobile-menu{
+  fill: #FFF;
+  filter: drop-shadow(-2px 0px 4px rgba(0, 0, 0, 0.40));
+}
