@@ -20,33 +20,33 @@ const BlogCard = ({ blog }: any) => {
       gridColumn
         ? gridColumn === "auto"
           ? "col-auto"
-          : `col-span-${gridColumn}`
+          : `col-span-5 md:col-span-${gridColumn}`
         : ""
     }
-    ${gridRow ? (gridRow === "auto" ? "row-auto" : `row-span-${gridRow}`) : ""}
+    ${gridRow ? (gridRow === "auto" ? "row-auto" : `row-span-5 md:row-span-${gridRow}`) : ""}
     ${
       colStart
         ? colStart === "auto"
           ? "col-start-auto"
-          : `col-start-${colStart}`
+          : `md:col-start-${colStart}`
         : ""
     }  
-    ${colEnd ? (colEnd === "auto" ? "col-end-auto" : `col-end-${colEnd}`) : ""}
+    ${colEnd ? (colEnd === "auto" ? "col-end-auto" : ` md:col-end-${colEnd}`) : ""}
     ${
       rowStart
         ? rowStart === "auto"
           ? "row-start-auto"
-          : `row-start-${rowStart}`
+          : `md:row-start-${rowStart}`
         : ""
     }
-    ${rowEnd ? (rowEnd === "auto" ? "row-end-auto" : `row-end-${rowEnd}`) : ""}
+    ${rowEnd ? (rowEnd === "auto" ? "row-end-auto" : ` md:row-end-${rowEnd}`) : ""}
     `}
     >
-      <Card className={` p-5 gap-5 border-0 shadow-none h-full flex flex-col`}>
-        <div className={`${imgPosition === "top" ? "" : "flex gap-5"} flex-grow `}>
+      <Card className={` p-3 md:p-5 gap-5 border-0 shadow-none h-full flex flex-col`}>
+        <div className={`${imgPosition === "top" ? "" : "block md:flex gap-5"} flex-grow `}>
        
             <img
-              className={` ${imgPosition === 'top' ? "max-h-[234px] w-full" : 'h-[300px] w-[238px]'} rounded-3xl`}
+              className={` ${imgPosition === 'top' ? "max-h-[234px] w-full" : 'h-[128px] md:h-[300px] w-full md:w-[238px]'} rounded md:rounded-3xl`}
               src={blog.image}
               alt="blog-image"
             />
