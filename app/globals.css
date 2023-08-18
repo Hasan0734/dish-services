@@ -160,3 +160,41 @@ body,
   fill: #FFF;
   filter: drop-shadow(-2px 0px 4px rgba(0, 0, 0, 0.40));
 }
+
+
+
+.clock-svg svg{
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: visible;
+  transform: scaleX(-1) rotate(272deg);
+}
+
+.clock-svg circle{
+  fill: rgba(0,0,0,0);
+  stroke: #fff;
+  stroke-dasharray: 100 100;
+  stroke-width: 31.85px;
+  animation: pie1 5s infinite  ease-in-out;
+
+
+}
+
+ 
+
+@keyframes pie1 {
+    
+  from{
+       stroke-dasharray: 100 100;
+      
+   }
+   to{
+       stroke-dasharray: 1 100;
+   }
+
+
+}

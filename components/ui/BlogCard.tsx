@@ -3,6 +3,8 @@ import { Card } from "./card";
 import Link from "next/link";
 
 const BlogCard = ({ blog }: any) => {
+
+
   const {
     colStart,
     colEnd,
@@ -13,34 +15,18 @@ const BlogCard = ({ blog }: any) => {
     imgPosition,
   } = blog;
 
+
+  const getColumn = gridColumn ? gridColumn === "auto" ? "col-auto" :`col-span-5 md:col-span-${gridColumn}` : "";
+  const getColumnStart = colStart ? colStart === "auto" ? "col-start-auto" : `md:col-start-${colStart}` : "";
+  const getColumnEnd = colEnd ? (colEnd === "auto" ? "col-end-auto" : ` md:col-end-${colEnd}`) : "";
+
+  const getRow = gridRow ? (gridRow === "auto" ? "row-auto" : `row-span-5 md:row-span-${gridRow}`) : "";
+  const getRowStart = rowStart ? rowStart === "auto" ? "row-start-auto" : `md:row-start-${rowStart}` : "";
+  const getRowEnd = rowEnd ? (rowEnd === "auto" ? "row-end-auto" : ` md:row-end-${rowEnd}`) : ""
+
   return (
     <div
-      className={`rounded-[20px] shadow-[0px_2px_14px_0px_rgba(0,0,0,0.25)]
-    ${
-      gridColumn
-        ? gridColumn === "auto"
-          ? "col-auto"
-          : `col-span-5 md:col-span-${gridColumn}`
-        : ""
-    }
-    ${gridRow ? (gridRow === "auto" ? "row-auto" : `row-span-5 md:row-span-${gridRow}`) : ""}
-    ${
-      colStart
-        ? colStart === "auto"
-          ? "col-start-auto"
-          : `md:col-start-${colStart}`
-        : ""
-    }  
-    ${colEnd ? (colEnd === "auto" ? "col-end-auto" : ` md:col-end-${colEnd}`) : ""}
-    ${
-      rowStart
-        ? rowStart === "auto"
-          ? "row-start-auto"
-          : `md:row-start-${rowStart}`
-        : ""
-    }
-    ${rowEnd ? (rowEnd === "auto" ? "row-end-auto" : ` md:row-end-${rowEnd}`) : ""}
-    `}
+      className={`rounded-[20px] shadow-[0px_2px_14px_0px_rgba(0,0,0,0.25)] ${getColumn} ${getRow} ${getColumnStart} ${getColumnEnd} ${getRowStart} ${getRowEnd}`}
     >
       <Card className={` p-3 md:p-5 gap-5 border-0 shadow-none h-full flex flex-col`}>
         <div className={`${imgPosition === "top" ? "" : "block md:flex gap-5"} flex-grow `}>

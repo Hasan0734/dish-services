@@ -20,12 +20,25 @@ export default function Home() {
                   <b>75%</b>
                 </p>
               </div>
-              <div className="flex justify-center mt-12">
+              <div className="flex justify-center mt-12 relative">
                 <img
-                  className="w-[200px] lg:w-[365px] h-[200px] lg:h-[365px]"
-                  src="/assets/Group 63.png"
-                  alt="clock"
+                  className="w-[210px] lg:w-[375px] h-[207px] lg:h-[372px] rounded-full absolute"
+                  src="/assets/cap-dish-2.png"
+                  alt="dish"
                 />
+
+                <div className="clock-svg relative  w-[200px] lg:w-[365px] h-[200px] lg:h-[365px]">
+                  <svg viewBox="0 0 62 62">
+                    <circle className="pie1" cx="29.9" cy="31" r="15.9" />
+                  </svg>
+                  <div className="absolute top-0 left-0 right-0 bottom-0 p-2">
+                    <img
+                      className=" w-full"
+                      src="/assets/clock.png"
+                      alt=""
+                    />
+                  </div>
+                </div>
               </div>
               <div className="text-center mt-12">
                 <p className="text-sm md:text-2xl font-normal">
