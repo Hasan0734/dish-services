@@ -19,6 +19,16 @@ export default function Home() {
     return () => clearInterval(interval);
   }, [currentDashOffset]);
 
+  // const style = { "--i": 1 } as React.CSSProperties;
+
+  const style = (num: number) => {
+    return { "--i": num } as React.CSSProperties;
+  };
+
+  console.log(time.getHours() >= 12 && time.getHours() >= 18 && "Good Afternoon" )
+ 
+ 
+
   return (
     <>
       <section className="mt-20">
@@ -29,7 +39,7 @@ export default function Home() {
                 <h1 className="text-2xl md:text-[40px] md:leading-[48px] font-bold">
                   {time.getHours() < 12 && "Good Morning"}
                   {time.getHours() >= 12 &&
-                    time.getHours() <= 18 &&
+                    time.getHours() >= 18 &&
                     "Good Afternoon"}
                 </h1>
                 <p className="font-normal text-sm md:text-xl">
@@ -37,43 +47,76 @@ export default function Home() {
                   <b>75%</b>
                 </p>
               </div>
-              <div className="flex justify-center mt-12 relative">
+              <div className="flex justify-center items-center mt-12 relative">
                 {time.getHours() < 12 && (
                   <img
-                    className="w-[210px] lg:w-[375px] h-[207px] lg:h-[372px] rounded-full absolute"
+                    className="w-[200px] lg:w-[365px] h-[200px] lg:h-[365px] rounded-full absolute"
                     src="/assets/cap-dish-2.png"
                     alt="dish"
                   />
                 )}
-                {time.getHours() >= 12 && time.getHours() <= 18 && (
+                {time.getHours() >= 12 && time.getHours() >= 18 && (
                   <img
-                    className="w-[210px] lg:w-[375px] h-[207px] lg:h-[372px] rounded-full absolute"
+                    className="w-[200px] lg:w-[365px] h-[200px] lg:h-[365px] rounded-full absolute"
                     src="/assets/cap-dish-1.png"
                     alt="dish"
                   />
                 )}
 
                 <div className="clock-svg relative  w-[200px] lg:w-[365px] h-[200px] lg:h-[365px]">
-                  <svg viewBox="0 0 62 62">
-                    <circle
-                      className="pie1"
-                      cx="29.9"
-                      cy="31"
-                      r="15.9"
-                      style={{
+                  
+                  <svg viewBox="0 0 32 32">
+                    <circle r="16" cx="16" cy="16"  style={{
                         strokeDasharray: `${
                           100 - (100 * time.getMinutes()) / 60
                         } 100`,
-                      }}
-                    />
+                      }} />
                   </svg>
 
                   <div className="absolute top-0 left-0 right-0 bottom-0 w-full">
-                    <img
+                    {/* <img
                       className=" w-full rounded-full"
                       src="/assets/clock.svg"
                       alt=""
-                    />
+                    /> */}
+                    <div className="clock-indicator relative h-full w-full rounded-full flex items-center justify-center">
+                      <span style={style(1)}>
+                        <b></b>
+                      </span>
+                      <span style={style(2)}>
+                        <b></b>
+                      </span>
+                      <span style={style(3)}>
+                        <b></b>
+                      </span>
+                      <span style={style(4)}>
+                        <b></b>
+                      </span>
+                      <span style={style(5)}>
+                        <b></b>
+                      </span>
+                      <span style={style(6)}>
+                        <b></b>
+                      </span>
+                      <span style={style(7)}>
+                        <b></b>
+                      </span>
+                      <span style={style(8)}>
+                        <b></b>
+                      </span>
+                      <span style={style(9)}>
+                        <b></b>
+                      </span>
+                      <span style={style(10)}>
+                        <b></b>
+                      </span>
+                      <span style={style(11)}>
+                        <b></b>
+                      </span>
+                      <span style={style(12)}>
+                        <b></b>
+                      </span>
+                    </div>
                   </div>
                 </div>
 

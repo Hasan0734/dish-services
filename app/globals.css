@@ -5,80 +5,81 @@
 
 html,
 body,
-:root{
+:root {
   height: 100%;
 }
- 
+
 @layer base {
   :root {
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
- 
+
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
- 
+
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
- 
+
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
- 
+
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
- 
+
     --primary: 222.2 47.4% 11.2%;
     --primary-foreground: 210 40% 98%;
- 
+
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
- 
+
     --accent: 210 40% 96.1%;
     --accent-foreground: 222.2 47.4% 11.2%;
- 
+
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
- 
+
     --ring: 215 20.2% 65.1%;
- 
+
     --radius: 0.5rem;
   }
- 
+
   .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
- 
+
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
- 
+
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
- 
+
     --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
- 
+
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
- 
+
     --primary: 210 40% 98%;
     --primary-foreground: 222.2 47.4% 11.2%;
- 
+
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
- 
+
     --accent: 217.2 32.6% 17.5%;
     --accent-foreground: 210 40% 98%;
- 
+
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 85.7% 97.3%;
- 
+
     --ring: 217.2 32.6% 17.5%;
   }
 }
- 
+
 @layer base {
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
@@ -109,25 +110,26 @@ body,
   background-size: contain;
 } */
 
-.tips-swipper .swiper-pagination-horizontal{
+.tips-swipper .swiper-pagination-horizontal {
   left: 300px;
   bottom: 30px;
 }
 
 @media only screen and (max-width: 900px) {
-  .tips-swipper .swiper-pagination-horizontal{
+  .tips-swipper .swiper-pagination-horizontal {
     left: 0;
     bottom: 12px;
   }
 }
 
-.tips-swipper .swiper-pagination .swiper-pagination-bullet{ 
+.tips-swipper .swiper-pagination .swiper-pagination-bullet {
   width: 16px;
   height: 16px;
   background: #D9D9D9;
   border-radius: 50%;
 }
-.tips-swipper .swiper-pagination .swiper-pagination-bullet-active{ 
+
+.tips-swipper .swiper-pagination .swiper-pagination-bullet-active {
   width: 16px;
   height: 16px;
   background: #111;
@@ -135,7 +137,7 @@ body,
 }
 
 
-.about-section .about-card{
+.about-section .about-card {
   width: 476px;
   height: 547px;
   border-radius: 40px;
@@ -145,7 +147,7 @@ body,
 }
 
 @media only screen and (max-width: 768px) {
- .about-section .about-card{
+  .about-section .about-card {
     width: 320px;
     height: 296px;
     border-radius: 4px;
@@ -156,26 +158,27 @@ body,
 }
 
 
-.mobile-menu{
+.mobile-menu {
   fill: #FFF;
   filter: drop-shadow(-2px 0px 4px rgba(0, 0, 0, 0.40));
 }
 
 
 
-.clock-svg svg{
+.clock-svg svg {
   display: block;
   height: 100%;
   width: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  overflow: visible;
-  transform: scaleX(-1) rotate(271deg);
+  /* overflow: visible; */
+  border-radius: 50%;
+  transform: scaleX(-1) rotate(270deg);
 }
 
-.clock-svg circle{
-  fill: rgba(0,0,0,0);
+.clock-svg circle {
+  fill: rgba(0, 0, 0, 0);
   stroke: #fff;
   stroke-dasharray: 100 100;
   stroke-width: 31.85px;
@@ -184,23 +187,24 @@ body,
 }
 
 
- 
+
 
 @keyframes pie1 {
-    
-  from{
-       stroke-dasharray: 100 100;
-      
-   }
-   to{
-       stroke-dasharray: 1 100;
-   }
+
+  from {
+    stroke-dasharray: 100 100;
+
+  }
+
+  to {
+    stroke-dasharray: 1 100;
+  }
 
 
 }
 
 
-.clock::before {
+/* .clock::before {
   content: "";
   position: absolute;
   width: 15px;
@@ -210,7 +214,7 @@ body,
   border-radius: 50%;
   z-index: 100000;
 
-}
+} */
 
 .hour,
 .min,
@@ -284,3 +288,23 @@ body,
   border: 6px 6px 0 0;
 }
 
+
+.clock-indicator span {
+  position: absolute;
+  inset: 12px;
+  color: white;
+  /* height: 8px;
+  width: 8px; */
+  text-align: center;
+  transform: rotate(calc(30deg * var(--i)));
+}
+
+.clock-indicator span b {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  background: black;
+  overflow: hidden;
+  color: black;
+  border-radius: 50%;
+}

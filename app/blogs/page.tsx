@@ -13,6 +13,7 @@ const Blogs = () => {
     <section className="mt-20">
       <div className="container px-4 md:px-8 py-24 space-y-5">
         {/* {reshapeArray(blogs).map((items, i) => ( */}
+        
         <div className="grid grid-cols-5 grid-rows-5 gap-5">
           {/* {items.map((blog) => (
               <BlogCard key={blog.id} blog={blog} />
@@ -260,7 +261,7 @@ const Blogs = () => {
               <div className={`md:flex gap-5 flex-grow `}>
                 <img
                   className={`h-[128px] w-full md:h-[300px] md:w-[238px] rounded-3xl`}
-                  src={"/assets/blogs/b-image-5.png"}
+                  src={"/assets/blogs/b-image-6.png"}
                   alt="blog-image"
                 />
 
@@ -305,7 +306,7 @@ const Blogs = () => {
               <div className={`flex-grow`}>
                 <img
                   className={`h-[128px] w-full md:h-[159px] rounded-3xl`}
-                  src={"/assets/blogs/b-image-5.png"}
+                  src={"/assets/blogs/b-image-7.png"}
                   alt="blog-image"
                 />
 
@@ -350,7 +351,7 @@ const Blogs = () => {
               <div className={`flex-grow`}>
                 <img
                   className={`h-[128px] w-full md:h-[224px] rounded-3xl`}
-                  src={"/assets/blogs/b-image-5.png"}
+                  src={"/assets/blogs/b-image-8.png"}
                   alt="blog-image"
                 />
 
