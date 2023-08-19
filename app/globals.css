@@ -171,7 +171,7 @@ body,
   top: 0;
   left: 0;
   overflow: visible;
-  transform: scaleX(-1) rotate(272deg);
+  transform: scaleX(-1) rotate(271deg);
 }
 
 .clock-svg circle{
@@ -179,10 +179,10 @@ body,
   stroke: #fff;
   stroke-dasharray: 100 100;
   stroke-width: 31.85px;
-  animation: pie1 5s infinite  ease-in-out;
-
+  /* animation: pie1 5s infinite  ease-in-out; */
 
 }
+
 
  
 
@@ -198,3 +198,89 @@ body,
 
 
 }
+
+
+.clock::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: #84848484;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  z-index: 100000;
+
+}
+
+.hour,
+.min,
+.sec {
+  position: absolute;
+
+}
+
+.hour,
+.hr {
+  width: 160px;
+  ;
+  height: 160px;
+}
+
+.min,
+.mn {
+  width: 190px;
+  height: 190px;
+}
+
+.sec,
+.sc {
+  width: 230px;
+  height: 230px;
+}
+
+.hr,
+.mn,
+.sc {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  border-radius: 50%;
+
+}
+
+.hr::before {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 100px;
+  bottom: 80px;
+  border-radius: 30px;
+  background: #ff6767;
+  z-index: 12;
+  border: 6px 6px 0 0;
+}
+
+.mn::before {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 145px;
+  bottom: 92px;
+  border-radius: 30px;
+  background: #ff6767;
+  z-index: 12;
+  border: 6px 6px 0 0;
+}
+
+.sc::before {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 190px;
+  bottom: 109px;
+  border-radius: 30px;
+  background: #ff6767;
+  z-index: 12;
+  border: 6px 6px 0 0;
+}
+

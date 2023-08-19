@@ -18,7 +18,7 @@ const Navbar = () => {
   const pathname = usePathname();
 
   return (
-    <nav className=" inset-x-0 top-0 z-10 fixed bg-white">
+    <nav className=" inset-x-0 top-0 z-20 fixed bg-white">
       <div className="container md:px-8  shadow-[0px_4px_14px_0px_rgba(0,0,0,0.25)] px-4">
         <div className="py-4 flex items-center justify-between  ">
           <div>
