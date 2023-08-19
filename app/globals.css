@@ -151,9 +151,7 @@ body,
     width: 320px;
     height: 296px;
     border-radius: 4px;
-    background: #65A058;
-    box-shadow: -37.66666793823242px 37.66666793823242px 37.66666793823242px 0px rgba(255, 255, 255, 0.10) inset, 37.66666793823242px -37.66666793823242px 37.66666793823242px 0px rgba(165, 165, 165, 0.10) inset;
-    backdrop-filter: blur(37.66666793823242px);
+
   }
 }
 
@@ -174,7 +172,7 @@ body,
   left: 0;
   /* overflow: visible; */
   border-radius: 50%;
-  transform: scaleX(-1) rotate(270deg);
+  transform: scaleX(-1) rotate(271deg);
 }
 
 .clock-svg circle {
@@ -236,11 +234,11 @@ body,
   height: 190px;
 }
 
-.sec,
+/* .sec,
 .sc {
   width: 230px;
   height: 230px;
-}
+} */
 
 .hr,
 .mn,
@@ -255,11 +253,11 @@ body,
 .hr::before {
   content: '';
   position: absolute;
-  width: 10px;
+  width: 6px;
   height: 100px;
   bottom: 80px;
   border-radius: 30px;
-  background: #ff6767;
+  background: #EF7F1B;
   z-index: 12;
   border: 6px 6px 0 0;
 }
@@ -267,34 +265,33 @@ body,
 .mn::before {
   content: '';
   position: absolute;
-  width: 10px;
+  width: 6px;
   height: 145px;
   bottom: 92px;
   border-radius: 30px;
-  background: #ff6767;
+  background: #EF7F1B;
   z-index: 12;
   border: 6px 6px 0 0;
 }
 
-.sc::before {
+/* .sc::before {
   content: '';
   position: absolute;
   width: 10px;
   height: 190px;
   bottom: 109px;
   border-radius: 30px;
-  background: #ff6767;
+  background: #EF7F1B;
   z-index: 12;
   border: 6px 6px 0 0;
-}
+} */
+
 
 
 .clock-indicator span {
   position: absolute;
   inset: 12px;
   color: white;
-  /* height: 8px;
-  width: 8px; */
   text-align: center;
   transform: rotate(calc(30deg * var(--i)));
 }
@@ -305,6 +302,27 @@ body,
   display: inline-block;
   background: black;
   overflow: hidden;
-  color: black;
   border-radius: 50%;
+  position: relative;
+
+}
+
+@media only screen and (max-width: 1024px) {
+  .hr::before {
+    height: 61px;
+  }
+
+  .mn::before {
+    height: 86px;
+  }
+  .clock-indicator span {
+    inset: 10px;
+
+  }
+  .clock-indicator span b {
+    width: 7px;
+    height: 7px;
+  
+  }
+  
 }

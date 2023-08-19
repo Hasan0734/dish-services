@@ -25,7 +25,7 @@ export default function Home() {
     return { "--i": num } as React.CSSProperties;
   };
 
-  console.log(time.getHours() >= 12 && time.getHours() >= 18 && "Good Afternoon" )
+  console.log(time.getMinutes() )
  
  
 
@@ -81,40 +81,40 @@ export default function Home() {
                     /> */}
                     <div className="clock-indicator relative h-full w-full rounded-full flex items-center justify-center">
                       <span style={style(1)}>
-                        <b></b>
+                      <b style={{display: time.getMinutes() >= 5 ? 'none': 'inline-block'}}></b>
                       </span>
                       <span style={style(2)}>
-                        <b></b>
+                      <b style={{display: time.getMinutes() >=10 ? 'none': 'inline-block'}}></b>
                       </span>
                       <span style={style(3)}>
-                        <b></b>
+                      <b style={{display: time.getMinutes() >= 15 ? 'none': 'inline-block'}}></b>
                       </span>
                       <span style={style(4)}>
-                        <b></b>
+                      <b style={{display: time.getMinutes() >= 20 ? 'none': 'inline-block'}}></b>
                       </span>
                       <span style={style(5)}>
-                        <b></b>
+                      <b style={{display: time.getMinutes() >= 25 ? 'none': 'inline-block'}}></b>
                       </span>
                       <span style={style(6)}>
-                        <b></b>
+                      <b style={{display: time.getMinutes() >= 30 ? 'none': 'inline-block'}}></b>
                       </span>
                       <span style={style(7)}>
-                        <b></b>
+                      <b style={{display: time.getMinutes() >= 35 ? 'none': 'inline-block'}}></b>
                       </span>
                       <span style={style(8)}>
-                        <b></b>
+                      <b style={{display: time.getMinutes() >= 40 ? 'none': 'inline-block'}}></b>
                       </span>
                       <span style={style(9)}>
-                        <b></b>
+                      <b style={{display: time.getMinutes() >= 45 ? 'none': 'inline-block'}}></b>
                       </span>
                       <span style={style(10)}>
-                        <b></b>
+                      <b style={{display: time.getMinutes() >= 50 ? 'none': 'inline-block'}}></b>
                       </span>
                       <span style={style(11)}>
-                        <b></b>
+                      <b style={{display: time.getMinutes() >= 55 ? 'none': 'inline-block'}}></b>
                       </span>
                       <span style={style(12)}>
-                        <b></b>
+                        <b style={{display: time.getMinutes() >= 1 ? 'none': 'inline-block'}}></b>
                       </span>
                     </div>
                   </div>
