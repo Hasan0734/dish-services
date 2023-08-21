@@ -80,6 +80,8 @@ export default function Home() {
                       alt=""
                     /> */}
                     <div className="clock-indicator relative h-full w-full rounded-full flex items-center justify-center">
+
+                   
                       <span style={style(1)}>
                       <b style={{display: time.getMinutes() >= 5 ? 'none': 'inline-block'}}></b>
                       </span>
