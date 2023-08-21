@@ -29,7 +29,7 @@ const BestSellSection = () => {
     return () => window.removeEventListener("resize", setTabPosition);
   }, [activeTabIndex]);
 
-  console.log(tabUnderlineLeft, tabUnderlineWidth);
+
 
   return (
     <>
@@ -49,27 +49,7 @@ const BestSellSection = () => {
                     {tab.title}
                   </TabsTrigger>
                 ))}
-                {/* <TabsTrigger
-                onClick={() => setActiveTab("best-sellers")}
-                className="px-0 relative data-[state=active]:md:text-3xl data-[state=active]:text-black text-xs md:text-2xl font-bold text-lightGray data-[state=active]:text-sm"
-                value="best-sellers"
-              >
-                Our best sellers
-              </TabsTrigger>
-              <TabsTrigger
-                onClick={() => setActiveTab("must-try")}
-                className="px-0 relative data-[state=active]:md:text-3xl data-[state=active]:text-black text-xs md:text-2xl font-bold text-lightGray data-[state=active]:text-sm"
-                value="must-try"
-              >
-                Must try
-              </TabsTrigger>
-              <TabsTrigger
-                onClick={() => setActiveTab("unique-dishes")}
-                className="px-0 relative  data-[state=active]:md:text-3xl data-[state=active]:text-black text-xs md:text-2xl font-bold text-lightGray data-[state=active]:text-sm"
-                value="unique-dishes"
-              >
-                Unique dishes
-              </TabsTrigger> */}
+              
               </TabsList>
               <div className="border-b border-gray md:border-0">
                 <span
