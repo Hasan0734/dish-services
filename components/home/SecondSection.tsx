@@ -33,7 +33,7 @@ const SecondSection = () => {
 
   return (
     <>
-      <section className="mt-20">
+      <section className="mt-24 md:mt-60">
         <div className="container py-32 px-4 md:px-8">
           <div className="flex items-center gap-4 sm:gap-10 justify-center">
             <svg
