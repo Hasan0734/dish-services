@@ -19,7 +19,7 @@ const Navbar = () => {
   return (
     <nav className=" inset-x-0 top-0 z-20 fixed bg-white">
       <div className="container md:px-8  shadow-[0px_4px_14px_0px_rgba(0,0,0,0.25)] px-4">
-        <div className="py-4 flex items-center justify-center sm::justify-between  ">
+        <div className="py-4 flex items-center justify-center sm:justify-between  ">
           <div>
             <img
               className="w-[95px] h-[32px] sm:w-[150px] sm:h-[48px]"
