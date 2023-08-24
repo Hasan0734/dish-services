@@ -35,10 +35,9 @@ const SecondSection = () => {
     <>
       <section className="mt-20">
         <div className="container py-32 px-4 md:px-8">
-          <div className="flex items-center gap-10 justify-center">
+          <div className="flex items-center gap-4 sm:gap-10 justify-center">
             <svg
-              width="106"
-              height="221"
+              className="w-[60px] h-[73px] md:w-[106px] md:h-[221px]"
               viewBox="0 0 106 221"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -92,7 +91,7 @@ const SecondSection = () => {
                 </filter>
               </defs>
             </svg>
-            <div className="w-[236px] h-[236px] rounded-full overflow-hidden">
+            <div className="w-[77px] h-[77px] md:w-[236px] md:h-[236px] rounded-full overflow-hidden">
               {/* <img
                 className="w-full"
                 src={"/assets/cap-dish-2.png"}
@@ -115,7 +114,7 @@ const SecondSection = () => {
                 </motion.div>
               ))}
             </div>
-            <div className="w-[236px] h-[236px] rounded-full overflow-hidden">
+            <div className="w-[77px] h-[77px] md:w-[236px] md:h-[236px] rounded-full overflow-hidden">
               {/* <img
                 className="w-full"
                 src={"/assets/cap-dish-2.png"}
@@ -138,8 +137,8 @@ const SecondSection = () => {
               ))}
             </div>
             <svg
-              width="180"
-              height="223"
+             className="w-[60px] h-[73px] md:w-[180px] md:h-[223px]"
+             
               viewBox="0 0 180 223"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"

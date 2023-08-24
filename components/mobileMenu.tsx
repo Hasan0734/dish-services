@@ -29,18 +29,15 @@ const menus = [
 const MobileMenu = () => {
   const pathname = usePathname();
 
-
-
   return (
     <>
- 
-      <div className="fixed bottom-0 left-0 right-0 bg-white z-20 mobile-menu px-4 md:hidden">
+      <div className="fixed bottom-0 left-0 right-0 bg-white z-20 mobile-menu px-1 sm:px-4 md:hidden">
         <ul className="flex justify-between items-center">
           {menus.map((item, index) => (
             <li key={item.id} className="relative">
               <Link
                 href={item.href}
-                className={`p-3 flex items-center flex-col justify-center gap-2 
+                className={`p-1 xs:p-3 flex items-center flex-col justify-center gap-2 
                 ${pathname === item.href ? "text-warning" : "text-black"} ${
                   index === 2 ? "-mt-2.5 relative" : ""
                 }`}
@@ -48,19 +45,23 @@ const MobileMenu = () => {
                 {/* <span className={`${i === 2 ? 'absolute inset-x-0 w-full' : ''}`}>{item.icon}</span> */}
                 {index === 2 ? (
                   <div
-                    className=" rounded-full absolute -top-7 bg-green h-[70px] flex items-center justify-center shadow-[inset_0_-3px_4px_rgba(0,0,0,0.15)]
+                    className=" rounded-full absolute -top-7 bg-green h-[70px] flex items-center
+                     justify-center shadow-[inset_0_-3px_4px_rgba(0,0,0,0.15)]
                     w-[70px]"
                   >
-                    <div className="bg-warning flex items-center  rounded-full
-                  justify-center h-[50px] w-[50px] text-white drop-shadow-[-2px_0px_4px_rgba(0,0,0,0.40)]">{item.icon}</div>
-             
+                    <div
+                      className="bg-warning flex items-center  rounded-full
+                  justify-center h-[50px] w-[50px] text-white drop-shadow-[-2px_0px_4px_rgba(0,0,0,0.40)]"
+                    >
+                      {item.icon}
+                    </div>
                   </div>
                 ) : (
-                  item.icon
+                  <span className="">{item.icon}</span>
                 )}
                 <span
                   className={cn(
-                    "block text-black text-sm font-medium",
+                    "block text-black text-[10px] sm:text-sm font-medium",
                     `${poppins.className} ${
                       pathname === item.href ? "text-warning " : "text-black"
                     } ${index === 2 ? "mt-[38px]" : ""}`

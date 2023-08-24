@@ -5,7 +5,6 @@ import Link from "next/link";
 import React from "react";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
-import { ArrowRight } from "lucide-react";
 
 const routes = [
   { title: "Home", href: "/" },
@@ -20,15 +19,16 @@ const Navbar = () => {
   return (
     <nav className=" inset-x-0 top-0 z-20 fixed bg-white">
       <div className="container md:px-8  shadow-[0px_4px_14px_0px_rgba(0,0,0,0.25)] px-4">
-        <div className="py-4 flex items-center justify-between  ">
+        <div className="py-4 flex items-center justify-center sm::justify-between  ">
           <div>
-            <Image
-              width={150}
-              height={48}
+            <img
+              className="w-[95px] h-[32px] sm:w-[150px] sm:h-[48px]"
+             
               alt="logo"
               src={"/assets/logo.png"}
             />
           </div>
+
           <div className="hidden md:flex  items-center justify-between gap-5">
             <ul className="flex items-center gap-4">
               {routes.map((route) => (
@@ -82,8 +82,6 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-
-        
       </div>
     </nav>
   );
