@@ -25,7 +25,6 @@ export default function Home() {
     return { "--i": num } as React.CSSProperties;
   };
 
-  console.log(time.getMinutes() )
  
  
 

@@ -46,9 +46,7 @@ const BlogCard = ({ blog }: any) => {
       : `row-end-${rowEnd}`
     : "";
 
-  // console.log(getColumn, getColumnStart, getColumnEnd, getRow, getRowStart, getRowEnd)
 
-  // {gridColumn} ${gridRow} ${getColumnStart} ${getColumnEnd} ${getRowStart} ${getRowEnd}
 
   return (
     <>
